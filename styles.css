@@ -142,11 +142,11 @@
 
   .register {
     margin: 10px;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     background-color: white;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     transition: 0.5s;
     color: hsl(0, 0%, 41%);
     
@@ -155,3 +155,64 @@
   .register:hover {
     color: hsl(0, 0%, 8%);
   }
+
+  #container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-img { 
+    width: 50vh;
+  }
+
+  .inner-divs {
+    width: 50%;
+    padding: 100px 180px 0 180px;  
+  }
+
+.title {
+  padding-top: 50px;
+  font-size: 100px;
+  line-height: 1;
+  padding-bottom: 50px;
+  color: hsl(0, 0%, 8%);
+}
+
+.subtitle {
+  font-size: 24px;
+    font-weight: 500;
+}
+
+.learn-btn {
+  background-color: hsl(0, 0%, 8%);
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 15px;
+    font-weight: 700;
+    margin: 50px 0;
+    cursor: pointer;
+    border: 1px solid hsl(0, 0%, 8%);
+    transition: 0.5s;
+}
+
+.learn-btn:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  
+}
+
+.imgs {
+  width: 130px;
+}
+
+.quilt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  
+}

@@ -1,5 +1,5 @@
 export const generateNav = () => {
-    const root = document.getElementById("root");
+    ;
     const navbar = document.createElement("div");
     navbar.classList = "navbar";
     root.appendChild(navbar);
