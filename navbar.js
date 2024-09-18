@@ -14,7 +14,7 @@ export const generateNav = () => {
     navbar.appendChild(userLinks);
     
     const logo = document.createElement("img");
-    logo.src = "/images/logo.svg";
+    logo.src = "./images/logo.svg";
     logo.classList = "logo";
     navLinks.appendChild(logo);
     
@@ -77,7 +77,7 @@ export const generateNav = () => {
     const todoImg = document.createElement("img");
     todoImg.id = "todo-img";
     todoImg.classList = "drop-img";
-    todoImg.src = "/images/icon-todo.svg";
+    todoImg.src = "./images/icon-todo.svg";
     todo.appendChild(todoImg);
 
     const todoText = document.createElement("p");
@@ -92,7 +92,7 @@ export const generateNav = () => {
     const calendarImg = document.createElement("img");
     calendarImg.id = "calendar-img";
     calendarImg.classList = "drop-img";
-    calendarImg.src = "/images/icon-calendar.svg";
+    calendarImg.src = "./images/icon-calendar.svg";
     calendar.appendChild(calendarImg);
 
     const calendarText = document.createElement("p");
@@ -107,7 +107,7 @@ export const generateNav = () => {
     const remindersImg = document.createElement("img");
     remindersImg.id = "reminders-img";
     remindersImg.classList = "drop-img";
-    remindersImg.src = "/images/icon-reminders.svg";
+    remindersImg.src = "./images/icon-reminders.svg";
     reminders.appendChild(remindersImg);
 
     const remindersTxt = document.createElement("p");
@@ -122,7 +122,7 @@ export const generateNav = () => {
     const planningImg = document.createElement("img");
     planningImg.id = "planning-img";
     planningImg.classList = "drop-img";
-    planningImg.src = "/images/icon-planning.svg";
+    planningImg.src = "./images/icon-planning.svg";
     planning.appendChild(planningImg);
 
     const planningTxt = document.createElement("p");
@@ -173,7 +173,7 @@ export const generateNav = () => {
 
     const hamburger = document.createElement("img");
     hamburger.id = "hamburger";
-    hamburger.src = "/images/icon-menu.svg";
+    hamburger.src = "./images/icon-menu.svg";
     navbar.appendChild(hamburger);
 
     hamburger.addEventListener("click", () => {
@@ -193,7 +193,7 @@ export const generateNav = () => {
 
     const x = document.createElement("img");
     x.id = "x";
-    x.src = "/images/icon-close-menu.svg";
+    x.src = "./images/icon-close-menu.svg";
     rNav.appendChild(x);
 
     x.addEventListener("click", ()=> {
