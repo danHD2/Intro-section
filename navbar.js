@@ -150,19 +150,19 @@ export const generateNav = () => {
     dropCompany.appendChild(blog);
 
     featuresDiv.addEventListener("mouseover", () => {
-        featuresIcon.src = "/images/icon-arrow-up.svg";
+        featuresIcon.src = "./images/icon-arrow-up.svg";
     })
 
     featuresDiv.addEventListener("mouseout", () => {
-        featuresIcon.src = "/images/icon-arrow-down.svg";
+        featuresIcon.src = "./images/icon-arrow-down.svg";
     })
 
     companyDiv.addEventListener("mouseover", () => {
-        companyIcon.src = "/images/icon-arrow-up.svg";
+        companyIcon.src = "./images/icon-arrow-up.svg";
     })
 
     companyDiv.addEventListener("mouseout", () => {
-        companyIcon.src = "/images/icon-arrow-down.svg";
+        companyIcon.src = "./images/icon-arrow-down.svg";
     })
 
 
