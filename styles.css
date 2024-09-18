@@ -55,7 +55,7 @@
     font-family: "Epilogue", sans-serif;
     color: hsl(0, 0%, 41%);
     background-color: hsl(0, 0%, 98%);
-    height: 100vh;
+    
   }
 
   .navbar {
@@ -81,10 +81,20 @@
     display: inline-block;
     padding-right: 5px;
     transition: 0.5s;
+    
+  }
+
+  .features-div {
+    transition: 0.5s;
+    padding: 20px;
   }
 
   .features:hover {
     color: hsl(0, 0%, 8%);
+  }
+
+  .company-div {
+    padding: 20px;
   }
 
   .company {
@@ -97,12 +107,20 @@
     color: hsl(0, 0%, 8%);
   }
 
+  .features-div:hover .drop {
+    display: block;
+  }
+
+  .company-div:hover .drop-c {
+    display: block;
+  }
+
 .menu-icon-down {
     display: inline-block;
 }
 
   .navbar div {
-    margin: 20px;
+    
     cursor: pointer;
   }
 
@@ -167,12 +185,12 @@
 
   .inner-divs {
     width: 50%;
-    padding: 100px 180px 0 180px;  
+    padding: 100px 110px 0 180px;  
   }
 
 .title {
   padding-top: 50px;
-  font-size: 100px;
+  font-size: 4vw;
   line-height: 1;
   padding-bottom: 50px;
   color: hsl(0, 0%, 8%);
@@ -205,6 +223,7 @@
 .imgs {
   width: 130px;
 }
+ 
 
 .quilt {
   display: flex;
@@ -213,6 +232,258 @@
   padding-top: 50px;
 }
 
-@media only screen and (max-width: 1000px) {
-  
+.drop-img {
+  display: inline-block;
+  padding-right: 10px;
 }
+
+.drop-txt {
+  display: inline-block;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 0 0 5px 0;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+
+.reminders {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+
+.planning {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 0 0;
+}
+
+.drop {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: hsl(0, 0%, 98%);
+  z-index: 2;
+  left: 100px;
+  top: 60px;
+  transition: 0.5s;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.drop-c {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: hsl(0, 0%, 98%);
+  z-index: 2;
+  top: 60px;
+  transition: 0.5s;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.drop-txts {
+  padding: 5px 0 5px 0;
+}
+
+.drop-txts:first-child {
+  padding: 0 0 5px 0;
+}
+
+.drop-txts:last-child {
+  padding: 5px 0 0 0;
+}
+
+#r-nav {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #container {
+    flex-direction: column-reverse;
+  }
+
+  .inner-divs {
+    padding: 0;
+    width: 100%;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+
+  .hero-img {
+    width:100%;
+  }
+
+  .title {
+    font-size: 9vw;
+  }
+
+    #text-div {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .quilt {
+      width: 100%;
+      padding-top:0;
+      justify-content: space-evenly;
+      padding-bottom: 50px;
+
+    }
+.imgs {
+  width: 70px;
+}
+
+.user-links {
+  display: none;
+}
+
+    .features-div, .company-div, .careers, .about {
+      display: none;
+    }
+
+    #r-nav {
+      display: block;
+    }
+
+    #shadow {
+      display: none;
+      background-color:  rgba(0, 0, 0, 0.736);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      transition: 0.5s;
+    }
+
+    #hamburger {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 20px;
+     
+      cursor: pointer;
+    }
+
+    #x {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 20px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    #r-nav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      background-color: white;
+      width: 300px;
+      z-index: 1;
+      height: 100vh;
+      font-weight: 500;
+      transition: 0.5s;
+    }
+
+    #r-nav-cont {
+      margin-top: 100px;
+      
+    }
+
+    .r-features-div {
+      margin-bottom: 20px;
+      padding-left: 30px;
+      cursor: pointer;
+
+    }
+
+    .r-company-div {
+      margin: 20px 0 20px 0;
+      padding-left: 30px;
+      cursor: pointer;
+
+    }
+
+    .r-careers {
+      margin: 20px 0 20px 0;
+      padding-left: 30px;
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+    }
+
+    .r-about {
+      margin: 20px 0 0 0;
+      padding-left: 30px;
+      cursor: pointer;
+
+    }
+
+    .r-features {
+      padding-right: 5px;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+    }
+
+    .r-company-div {
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
+    }
+
+  .login {
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+
+  }    
+
+  .register {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+
+    
+  }
+
+  .r-feature-down {
+    display: none;
+    padding: 20px 20px 0px 20px;
+  }
+
+.r-company-down {
+  display: none;
+  padding: 20px 20px 0px 20px;
+}  
+
+}
+

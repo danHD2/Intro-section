@@ -1,5 +1,6 @@
 const root = document.getElementById("root")
 import { generateNav } from "./navbar.js";
+const respScreen = window.matchMedia("(max-width:1000px)");
 
 generateNav();
 
@@ -9,6 +10,7 @@ root.appendChild(container);
 
 const leftDiv = document.createElement("div");
 leftDiv.classList = "inner-divs";
+leftDiv.id = "text-div";
 container.appendChild(leftDiv);
 
 const rightDiv = document.createElement("div");
@@ -17,7 +19,7 @@ container.appendChild(rightDiv);
 
 const title = document.createElement("h1");
 title.classList = "title";
-title.textContent = "Make remote work"
+title.textContent = "Make remote work";
 leftDiv.appendChild(title);
 
 const subtitle = document.createElement("p");
@@ -58,3 +60,24 @@ const heroImg = document.createElement('img');
 heroImg.src = './images/image-hero-desktop.png';
 heroImg.classList = 'hero-img';
 rightDiv.appendChild(heroImg);
+
+
+
+
+
+const responsiveImg = (respScreen) => {
+    if (respScreen.matches) {
+        heroImg.src = './images/image-hero-mobile.png';
+    } else {
+        heroImg.src = './images/image-hero-desktop.png';
+       
+    }
+}
+
+responsiveImg(respScreen);
+
+respScreen.addEventListener("change", ()=>{
+    responsiveImg(respScreen);
+});
+
+
