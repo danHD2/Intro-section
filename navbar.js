@@ -208,6 +208,8 @@ export const generateNav = () => {
         hamburger.style.display = "block";
     })
 
+    
+
     const rFeaturesDiv = document.createElement("div");
     rFeaturesDiv.classList = "r-features-div";
     rNavCont.appendChild(rFeaturesDiv);
@@ -225,16 +227,24 @@ export const generateNav = () => {
     const rCompanyDiv = document.createElement("div");
     rCompanyDiv.classList = "r-company-div";
     rNavCont.appendChild(rCompanyDiv);
+
+    
     
     const rCompany = document.createElement("p");
     rCompany.classList = "company";
     rCompany.textContent = "Company";
     rCompanyDiv.appendChild(rCompany);
-    
+
     const rCompanyIcon = document.createElement("img");
     rCompanyIcon.src = "./images/icon-arrow-down.svg";
     rCompanyIcon.classList = "menu-icon-down";
     rCompanyDiv.appendChild(rCompanyIcon);
+
+    const rCompanyDown = document.createElement("div");
+    rCompanyDown.classList = "r-company-down";
+    rCompanyDiv.appendChild(rCompanyDown);
+    
+    
 
     const rCareers = document.createElement("p");
     rCareers.classList = "r-careers";
@@ -260,18 +270,89 @@ export const generateNav = () => {
     rFeatureDown.classList = "r-feature-down";
     rFeaturesDiv.appendChild(rFeatureDown);
 
-    rFeatureDown.appendChild(todo);
-    rFeatureDown.appendChild(calendar);
-    rFeatureDown.appendChild(reminders);
-    rFeatureDown.appendChild(planning);
+    const todoR = document.createElement("div");
+    todoR.classList = "todo";
+    rFeatureDown.appendChild(todoR);
 
-    const rCompanyDown = document.createElement("div");
-    rCompanyDown.classList = "r-company-down";
-    rCompanyDiv.appendChild(rCompanyDown);
+    const todoImgR = document.createElement("img");
+    todoImgR.id = "todo-img";
+    todoImgR.classList = "drop-img";
+    todoImgR.src = "./images/icon-todo.svg";
+    todoR.appendChild(todoImgR);
 
-    rCompanyDown.appendChild(history);
-    rCompanyDown.appendChild(team);
-    rCompanyDown.appendChild(blog);
+    const todoTextR = document.createElement("p");
+    todoTextR.classList = "drop-txt";
+    todoTextR.innerText = "Todo List";
+    todoR.appendChild(todoTextR);
+
+    const calendarR = document.createElement("div");
+    calendarR.classList = "calendar";
+    rFeatureDown.appendChild(calendarR);
+
+    const calendarImgR = document.createElement("img");
+    calendarImgR.id = "calendar-img";
+    calendarImgR.classList = "drop-img";
+    calendarImgR.src = "./images/icon-calendar.svg";
+    calendarR.appendChild(calendarImgR);
+
+    const calendarTextR = document.createElement("p");
+    calendarTextR.classList = "drop-txt";
+    calendarTextR.innerText = "Calendar";
+    calendarR.appendChild(calendarTextR);
+
+    const remindersR = document.createElement("div");
+    remindersR.classList = "reminders";
+    rFeatureDown.appendChild(remindersR);
+
+    const remindersImgR = document.createElement("img");
+    remindersImgR.id = "reminders-img";
+    remindersImgR.classList = "drop-img";
+    remindersImgR.src = "./images/icon-reminders.svg";
+    remindersR.appendChild(remindersImgR);
+
+    const remindersTxtR = document.createElement("p");
+    remindersTxtR.classList = "drop-txt";
+    remindersTxtR.innerText = "Reminders";
+    remindersR.appendChild(remindersTxtR);
+
+    const planningR = document.createElement("div");
+    planningR.classList = "planning";
+    rFeatureDown.appendChild(planningR);
+
+    const planningImgR = document.createElement("img");
+    planningImgR.id = "planning-img";
+    planningImgR.classList = "drop-img";
+    planningImgR.src = "./images/icon-planning.svg";
+    planningR.appendChild(planningImgR);
+
+    const planningTxtR = document.createElement("p");
+    planningTxtR.classList = "drop-txt";
+    planningTxtR.innerText = "Planning";
+    planningR.appendChild(planningTxtR);
+
+    const dropCompanyR = document.createElement("div");
+    dropCompanyR.classList = "drop-c";
+    rCompanyDiv.appendChild(dropCompanyR);
+
+    const historyR = document.createElement("p");
+    historyR.classList = "drop-txts";
+    historyR.innerText = "History";
+    rCompanyDown.appendChild(historyR);
+
+    const teamR = document.createElement("p");
+    teamR.classList = "drop-txts";
+    teamR.innerText = "Our Team";
+    rCompanyDown.appendChild(teamR);
+
+    const blogR = document.createElement("p");
+    blogR.classList = "drop-txts";
+    blogR.innerText = "Blog";
+    rCompanyDown.appendChild(blogR);
+
+
+ 
+
+    
 
     rFeaturesDiv.addEventListener("click", () => {
         if (rFeatureDown.style.display === "none") {

@@ -61,15 +61,17 @@ heroImg.src = './images/image-hero-desktop.png';
 heroImg.classList = 'hero-img';
 rightDiv.appendChild(heroImg);
 
-
+const hamburger = document.getElementById("hamburger");
 
 
 
 const responsiveImg = (respScreen) => {
     if (respScreen.matches) {
         heroImg.src = './images/image-hero-mobile.png';
+        hamburger.style.display = "block";
     } else {
         heroImg.src = './images/image-hero-desktop.png';
+        hamburger.style.display = "none";
        
     }
 }
